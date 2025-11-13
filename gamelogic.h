@@ -20,12 +20,15 @@ void SetBoard(Cell board[9][9]){
     checkGameComplete = IfGameCompleted(board);
     for(int i=0;i<9;i++){
         for(int j=0;j<9;j++){
-            if(board[i][j].value!=0 && board[i][j].fixed){
+            if(board[i][j].value!=0 && board[i][j].fixed ){
                 DrawText(TextFormat("%d", board[i][j].value), 50+i*60+20, 50+j*60+20, 26, BLACK);
                 DrawText(TextFormat("%d", board[i][j].value), 50+i*60+21, 50+j*60+20, 27, BLACK);
-            }if(board[i][j].value!=0 && board[i][j].fixed==false){
+            }if(board[i][j].value!=0 && board[i][j].fixed==false && !board[i][j].hint){
                 DrawText(TextFormat("%d", board[i][j].value), 50+i*60+20, 50+j*60+20, 26, GRAY);
                 DrawText(TextFormat("%d", board[i][j].value), 50+i*60+21, 50+j*60+20, 27, GRAY);
+            }if(board[i][j].value!=0 && board[i][j].hint){
+                DrawText(TextFormat("%d", board[i][j].value), 50+i*60+20, 50+j*60+20, 26, BLUE);
+                DrawText(TextFormat("%d", board[i][j].value), 50+i*60+21, 50+j*60+20, 27, BLUE);
             }
             if(board[i][j].temp_fixed){
                 DrawRectangle(50 + i*60 + 10, 50 + j*60 + 10, 50 - 10, 50 - 10, WHITE);

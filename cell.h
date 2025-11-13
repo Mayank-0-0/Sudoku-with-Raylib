@@ -5,6 +5,7 @@ typedef struct cells{
     int j;
     bool fixed;
     bool temp_fixed;
+    bool hint;
     int value;
 } Cell;
 Cell board[9][9] = {0};
