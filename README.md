@@ -13,6 +13,11 @@ An modern and interactive Sudoku game developed with [Raylib](https://www.raylib
 
 <br>
 
+## ▶️ Animation
+<img src='./assets/sudoku.gif' alt='Animation'>
+
+<br>
+
 ## ⚙️ Build & Run
 ```bash
 # Clone the repo  
